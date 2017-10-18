@@ -30,14 +30,16 @@ public class DuplicateJobException extends JobExecutionException {
 
 	/**
 	 * Create an exception with the given message.
+	 *
+	 * @param msg error message.
 	 */
 	public DuplicateJobException(String msg) {
 		super(msg);
 	}
 
 	/**
-	 * @param msg The message to send to caller
-	 * @param e the cause of the exception
+	 * @param msg error message.
+	 * @param e instance of {@link Throwable} that is the cause of the exception.
 	 */
 	public DuplicateJobException(String msg, Throwable e) {
 		super(msg, e);

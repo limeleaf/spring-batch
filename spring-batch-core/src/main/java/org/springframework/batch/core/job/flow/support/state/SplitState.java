@@ -49,7 +49,8 @@ public class SplitState extends AbstractState implements FlowHolder {
 	private FlowExecutionAggregator aggregator = new MaxValueFlowExecutionAggregator();
 
 	/**
-	 * @param name
+	 * @param flows collection of {@link Flow} instances.
+	 * @param name the name of the state.
 	 */
 	public SplitState(Collection<Flow> flows, String name) {
 		super(name);

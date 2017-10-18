@@ -31,14 +31,16 @@ public class NoSuchJobException extends JobExecutionException {
 
 	/**
 	 * Create an exception with the given message.
+	 *
+	 * @param msg the error message.
 	 */
 	public NoSuchJobException(String msg) {
 		super(msg);
 	}
 
 	/**
-	 * @param msg The message to send to caller
-	 * @param e the cause of the exception
+	 * @param msg the error message.
+	 * @param e the cause of the exception.
 	 */
 	public NoSuchJobException(String msg, Throwable e) {
 		super(msg, e);

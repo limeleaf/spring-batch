@@ -33,7 +33,7 @@ public class CompositeItemWriteListener<S> implements ItemWriteListener<S> {
 	/**
 	 * Public setter for the listeners.
 	 *
-	 * @param itemWriteListeners
+	 * @param itemWriteListeners list of {@link ItemWriteListener}s to be called when write events occur.
 	 */
 	public void setListeners(List<? extends ItemWriteListener<? super S>> itemWriteListeners) {
 		this.listeners.setItems(itemWriteListeners);
@@ -42,7 +42,7 @@ public class CompositeItemWriteListener<S> implements ItemWriteListener<S> {
 	/**
 	 * Register additional listener.
 	 *
-	 * @param itemWriteListener
+	 * @param itemWriteListener list of {@link ItemWriteListener}s to be registered.
 	 */
 	public void register(ItemWriteListener<? super S> itemWriteListener) {
 		listeners.add(itemWriteListener);

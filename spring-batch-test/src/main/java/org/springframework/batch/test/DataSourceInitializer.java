@@ -69,7 +69,7 @@ public class DataSourceInitializer implements InitializingBean, DisposableBean {
 	/**
 	 * Main method as convenient entry point.
 	 * 
-	 * @param args
+	 * @param args arguments to be passed to main.
 	 */
 	@SuppressWarnings("resource")
 	public static void main(String... args) {
@@ -127,7 +127,7 @@ public class DataSourceInitializer implements InitializingBean, DisposableBean {
 				String[] scripts;
 				try {
 					scripts = StringUtils.delimitedListToStringArray(stripComments(IOUtils.readLines(scriptResource
-							.getInputStream())), ";");
+							.getInputStream(), "UTF-8")), ";");
 				}
 				catch (IOException e) {
 					throw new BeanInitializationException("Cannot load script from [" + scriptResource + "]", e);

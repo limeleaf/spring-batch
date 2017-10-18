@@ -161,6 +161,9 @@ InitializingBean {
 
 	/**
 	 * Sets encoding for output template.
+	 *
+	 * @param newEncoding {@link String} containing the encoding to be used for
+	 * the writer.
 	 */
 	public void setEncoding(String newEncoding) {
 		this.encoding = newEncoding;
@@ -217,6 +220,9 @@ InitializingBean {
 	/**
 	 * headerCallback will be called before writing the first item to file.
 	 * Newline will be automatically appended after the header is written.
+	 *
+	 * @param headerCallback {@link FlatFileHeaderCallback} to generate the header
+	 *
 	 */
 	public void setHeaderCallback(FlatFileHeaderCallback headerCallback) {
 		this.headerCallback = headerCallback;
@@ -225,6 +231,9 @@ InitializingBean {
 	/**
 	 * footerCallback will be called after writing the last item to file, but
 	 * before the file is closed.
+	 *
+	 * @param footerCallback {@link FlatFileFooterCallback} to generate the footer
+	 *
 	 */
 	public void setFooterCallback(FlatFileFooterCallback footerCallback) {
 		this.footerCallback = footerCallback;
@@ -233,6 +242,9 @@ InitializingBean {
 	/**
 	 * Flag to indicate that writing to the buffer should be delayed if a
 	 * transaction is active. Defaults to true.
+	 *
+	 * @param transactional true if writing to buffer should be delayed.
+	 *
 	 */
 	public void setTransactional(boolean transactional) {
 		this.transactional = transactional;
